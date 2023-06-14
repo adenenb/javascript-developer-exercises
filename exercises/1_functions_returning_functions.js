@@ -7,7 +7,10 @@ parameter passed to createGetFunction when it was called.
 */
 function createGetFunction(elementToReturn) {
   // PLACE YOUR CODE BELOW
-
+  return (arr) => {
+    let validArguments = arr && arr.length >= elementToReturn && elementToReturn > 0;
+    return (validArguments && arr[elementToReturn - 1]) || 'Nonexistent';
+  }
   // PLACE YOUR CODE ABOVE
 }
 
