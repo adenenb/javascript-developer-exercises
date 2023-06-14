@@ -29,7 +29,19 @@ let widgets = [
 
 function specialSort(el1, el2) {
   // PLACE YOUR CODE BELOW
-
+  let sortKey1 = el1.sortKey;
+  let sortKey2 = el2.sortKey;
+  if (typeof sortKey1 == 'string' && typeof sortKey2 == 'string') {
+    return sortKey2 - sortKey1;
+  }
+  if (typeof sortKey1 == 'number' && typeof sortKey2 == 'number') {
+    return sortKey1 - sortKey2;
+  }
+  if (typeof sortKey1 == 'string') {
+    return -1;
+  } else {
+    return 1;
+  }
   // PLACE YOUR CODE ABOVE
 }
 
