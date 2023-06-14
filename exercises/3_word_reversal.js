@@ -9,7 +9,14 @@ let statement = 'Penn Mutual sells life insurance'
 
 function reverseLetters(str) {
   // PLACE YOUR CODE BELOW
-
+  let words = str.split(' ');
+  return words.map(word => {
+    let reverseWord = '';
+    for (i = 0; i < word.length; i++) {
+      reverseWord += word.charAt(word.length - 1 - i);
+    }
+    return reverseWord;
+  }).join(' ');
   // PLACE YOUR CODE ABOVE
 }
 
