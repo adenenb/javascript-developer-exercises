@@ -16,7 +16,12 @@ to the console, waits 3 more seconds and then writes
 console.log('Go!')
 
 // PLACE YOUR CODE BELOW
-
+let promise = wait(1).then(() => {
+  console.log('I waited 1 second');
+  wait(3).then(() => {
+    console.log('I waited 3 more sendonds');
+  });
+});
 // PLACE YOUR CODE ABOVE
 
 /*
