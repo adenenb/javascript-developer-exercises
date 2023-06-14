@@ -12,7 +12,14 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
-
+  let knownColors = ['blue', 'red', 'green', 'yellow'];
+  let mixColors = ['noMix', 'noMix', 'purple', 'noMix', 'green', 'noMix', 'brown', 'noMix', 'orange'];
+  let color1Order = knownColors.indexOf(color1) + 1;
+  let color2Order = knownColors.indexOf(color2) + 1;
+  if (color1Order < 1 || color2Order < 1) {
+    return 'unknown';
+  }
+  return mixColors[color1Order * color2Order] || 'noMix';
   // PLACE YOUR CODE ABOVE
 }
 
